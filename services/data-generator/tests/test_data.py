@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from renaissance_trading.data import generate_regime_data
+from data_generator.data import generate_regime_data
 
 
 class TestGenerateRegimeData:

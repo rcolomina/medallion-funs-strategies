@@ -3,33 +3,25 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "renaissance-trading"
+name = "data-generator"
 version = "0.1.0"
-description = "Hidden Markov Model implementations for market regime detection"
-readme = "README.md"
+description = "FastAPI service for synthetic market data generation"
 license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.24",
     "pandas>=2.0",
-    "scipy>=1.10",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
 ]
 
 [project.optional-dependencies]
-plot = [
-    "matplotlib>=3.7",
-]
-hmmlearn = [
-    "hmmlearn>=0.3",
-]
 dev = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
+    "httpx>=0.27",
     "ruff>=0.4",
 ]
-
-[project.scripts]
-renaissance-trading = "renaissance_trading.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

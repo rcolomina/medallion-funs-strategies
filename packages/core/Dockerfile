@@ -5,13 +5,9 @@ WORKDIR /app
 COPY pyproject.toml .
 COPY src/ src/
 
-RUN pip install --no-cache-dir ".[dev]"
+RUN pip install --no-cache-dir -e ".[dev]"
 
 COPY tests/ tests/
-
-# --- Run target: execute the pipeline ---
-FROM base AS run
-CMD ["renaissance-trading"]
 
 # --- Test target: run the test suite ---
 FROM base AS test

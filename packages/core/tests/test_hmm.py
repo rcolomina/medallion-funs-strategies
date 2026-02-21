@@ -8,7 +8,7 @@ Baum-Welch (EM), Viterbi decoding, and predict_proba.
 import numpy as np
 import pytest
 
-from renaissance_trading.hmm import GaussianHMM
+from renaissance_core.hmm import GaussianHMM
 
 
 # ---------------------------------------------------------------------------
