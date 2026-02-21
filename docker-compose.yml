@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      target: run
+    container_name: renaissance-trading-app
+
+  test:
+    build:
+      context: .
+      target: test
+    container_name: renaissance-trading-test
